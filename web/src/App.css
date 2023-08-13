@@ -1,0 +1,30 @@
+/* the shape in the intro main page*/
+
+.shape {
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+  background-image: linear-gradient(80deg, rgb(67, 59, 92) 20%, rgb(49, 22, 56) 100%);
+  width: 750px;
+  height: 550px;
+  border: solid 1px rgba(128, 128, 128, 0.144);
+}
+
+
+.shape-2 {
+  clip-path: polygon(0% 86%, 100% 0, 100% 100%, 0 100%);
+  background-image: linear-gradient(30deg, rgb(27, 22, 56)20%, rgb(59, 73, 92) 100%);
+  width: 800px;
+  height: 600px;
+  position: relative;
+  left: -2rem;
+  clip-path: circle(90% at 55% 00%);
+  position: relative;
+  top: -2.5rem;
+  left: -3rem
+}
+
+.section2 {
+  background: rgb(7, 9, 45);
+  background: radial-gradient(circle, rgba(7, 9, 45, 0.212) 0%, rgba(16, 16, 31, 0.096) 35%, rgba(5, 5, 17, 0) 100%);
+  background-position: 20rem 1rem;
+  background-size: cover;
+}

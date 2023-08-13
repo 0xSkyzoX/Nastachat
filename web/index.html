@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" type="image/png" href="./logo-chat.png">
+     <meta name="description" content="This is my application">
+     <title>Nastachat</title>
+</head>
+<body>
+     <noscript></noscript>
+     <script type="module" src="/src/index.tsx"></script>
+     
+     <div id="logout" class="flex justify-center hidden">
+
+     </div>
+     <div class="flex justify-center hidden" id="loading">
+          <img src="./public/loading.gif" width="50px" class="absolute z-[1] top-[50%] bottom-[50%] translate-y-[-50%]"></img>
+          </div>
+          <div class="flex flex-col">
+               <div id="account-sidebar" class="absolute">
+
+               </div>
+               <div id="rich-post" class="absolute bg-black w-[100%] hidden z-[10000]" style="display: none;"></div>
+          <div id="root" class="hidden"></div>
+          </div>
+         
+</body>
+</html>
