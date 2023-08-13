@@ -1,8 +1,3 @@
-# Nastachat
-The best place for Developers Community!
-
----
-
 # Nastachat API Documentation
 
 Welcome to the Nastachat API documentation! This API powers the backend functionalities of the Nastachat application, a platform for developers to connect, share posts, add friends, send messages, and more.
