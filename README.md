@@ -1,3 +1,81 @@
+# Startup Guide for Running Server and Web Applications
+
+This guide will walk you through the steps to start up your server and web applications using npm and Vite. It will also cover building your web application and using the `cd` command to navigate to the appropriate directories. Let's get started!
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js: Make sure you have Node.js installed on your system. You can download it from the official Node.js website: [https://nodejs.org/](https://nodejs.org/)
+
+## Starting the Server Application
+
+1. Open a terminal window.
+
+2. Navigate to the directory where your server application is located using the `cd` command:
+
+   ```bash
+   cd server
+   ```
+
+3. Install the required dependencies for the server application by running:
+
+   ```bash
+   npm install
+   ```
+
+4. Once the dependencies are installed, you can start the server application using the following command:
+
+   ```bash
+   npm start
+   ```
+
+   This command will launch your server application and make it accessible at the specified port.
+
+## Starting the Web Application with Vite
+
+1. Open a new terminal window.
+
+2. Navigate to the directory where your web application is located using the `cd` command:
+
+   ```bash
+   cd web
+   ```
+
+3. Install the required dependencies for the web application by running:
+
+   ```bash
+   npm install
+   ```
+
+4. After the dependencies are installed, you can start the web application using the following command:
+
+   ```bash
+   npm start
+   ```
+
+   This command will launch your web application using Vite's development server. You can access the application in your browser at the specified URL.
+
+## Building the Web Application
+
+Before deploying your web application to production, it's a good practice to build it for optimized performance.
+
+1. Open a terminal window.
+
+2. Navigate to the directory of your web application using the `cd` command:
+
+   ```bash
+   cd web
+   ```
+
+3. To build your web application, use the following command:
+
+   ```bash
+   npm run build
+   ```
+
+   This command will generate a build of your web application in the `dist` directory.
+   
 # Nastachat API Documentation
 
 Welcome to the Nastachat API documentation! This API powers the backend functionalities of the Nastachat application, a platform for developers to connect, share posts, add friends, send messages, and more.
