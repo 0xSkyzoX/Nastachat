@@ -980,3 +980,142 @@ Authorization: Bearer <your-token>
 ```
 
 Please ensure to include the required JWT in the `Authorization` header for authenticated requests. Handle the different response codes and messages appropriately in your client application.
+
+## User Data Management Documentation
+
+This comprehensive documentation outlines the various data structures and types used in the user data management system. This system is designed to manage user profiles, posts, comments, notifications, conversations, and other related functionalities within your application.
+
+### User Types
+
+The `UserType` enum defines the different roles or types of users within the system.
+
+- `Staff (0)`: Represents junior moderators who have limited moderation capabilities.
+- `Member (1)`: The default type for any registered user.
+- `Premium (2)`: Provides special features to members who have purchased premium access.
+- `Admin (3)`: Grants full administrative privileges, including access to the admin panel.
+
+### User Data Structure
+
+The `UserData` type encapsulates various details about a user.
+
+- `username`: The unique username chosen by the user during registration.
+- `email`: The email address associated with the user's account.
+- `fullname`: The user's full name as provided during registration.
+- `profile`: An object containing user profile details, including avatar, bio, friends, and notifications.
+- `verified`: A boolean indicating whether the user's account has been verified.
+- `type`: The user's role type based on the `UserType` enum.
+- `id`: A unique identifier assigned to the user.
+
+### Member Information
+
+The `MemberInfo` type provides summarized information about a user.
+
+- `username`: The username of the user.
+- `fullname`: The full name of the user.
+- `avatar`: The URL to the user's profile avatar image.
+- `id`: A unique identifier associated with the user.
+- `bio`: A brief biography or description provided by the user.
+
+### Reference and Comment Information
+
+The `ReferenceInfo` type contains information about references in posts or comments.
+
+- `post_id`: The unique identifier of the referenced post, if applicable.
+- `mentioned`: A boolean indicating whether the reference is a mention.
+
+The `CommentInfo` type holds details about comments made by users.
+
+- `by`: An object containing the comment author's information, including username, ID, and optionally avatar URL.
+- `content`: The content of the comment.
+- `id`: A unique identifier assigned to the comment.
+
+### Post Information
+
+The `PostInfo` type defines the structure of a post.
+
+- `title`: The title of the post.
+- `img`: The URL to an image associated with the post, if applicable.
+- `description`: A description of the post.
+- `owner`: An object containing details about the post's owner, including username, avatar URL, ID, and full name.
+- `comments`: An array of `CommentInfo` objects representing comments on the post.
+- `id`: A unique identifier assigned to the post.
+- `likes`: An array of user IDs representing users who have liked the post.
+- `createdAt`: A timestamp indicating when the post was created.
+- `reference`: An object of type `ReferenceInfo` representing post references.
+
+### Friend and Notification Information
+
+The `FriendInfo` type holds data about a user's friends.
+
+- `fullname`: The full name of the friend.
+- `username`: The username of the friend.
+- `avatar`: The URL to the friend's profile avatar image, if available.
+- `accepted`: A boolean indicating whether a friend request has been accepted.
+- `id`: A unique identifier associated with the friend.
+- `requested`: A boolean indicating whether a friend request has been sent.
+
+The `NotificationsInfo` type contains information about notifications.
+
+- `name`: The name of the notification.
+- `by`: The username of the user who triggered the notification, if applicable.
+- `description`: A description of the notification.
+- `user_id`: The user ID associated with the notification, if applicable.
+
+### Error Types
+
+The `ErrorTypes` enum lists different error types that can occur.
+
+- `Invalid_Token (0)`: Denotes an invalid authentication token.
+- `Expired_Token (1)`: Indicates an expired authentication token.
+
+### Message Information
+
+The `MessageInfo` type represents a message within a conversation.
+
+- `content`: The content of the message.
+- `author`: An object containing information about the message author, including username, full name, avatar URL, and ID.
+- `createdAt`: A timestamp indicating when the message was created.
+
+### Conversation Types
+
+The `ConversationType` enum defines the different types of conversations.
+
+- `PRIVATE`: Denotes a private one-on-one conversation.
+- `GROUP`: Denotes a group conversation.
+- `PUBLIC`: Denotes a public conversation.
+
+### Conversation Information
+
+The `ConversationsInfo` type stores information about conversations.
+
+- `type`: The type of the conversation, as defined by the `ConversationType` enum.
+- `members`: An array of `MemberInfo` objects representing the members of the conversation.
+- `messages`: An array of `MessageInfo` objects representing the messages within the conversation.
+- `id`: A unique identifier assigned to the conversation.
+
+### Profile Information
+
+The `ProfileInfo` type holds summarized profile information for a user.
+
+- `username`: The username of the user.
+- `fullname`: The full name of the user.
+- `bio`: A brief biography or description provided by the user.
+- `avatar`: The URL to the user's profile avatar image.
+
+### Inbox List
+
+The `InboxList` type contains information for displaying user inboxes.
+
+- `username`: The username of the user.
+- `fullname`: The full name of the user.
+- `avatar`: The URL to the user's profile avatar image.
+- `id`: A unique identifier associated with the user.
+- `bio`: A brief biography or description provided by the user.
+- `conversation_id`: The unique identifier of the associated conversation.
+
+### Event Types
+
+The `EventType` enum lists different event types that can occur.
+
+- `NotificationCreate`: Denotes the creation of a new notification.
+- `MessageCreate`: Denotes the creation of a new message.
