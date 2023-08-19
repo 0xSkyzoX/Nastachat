@@ -10,6 +10,7 @@ import Logout from '../components/logout';
 import Inbox from '../pages/inbox';
 import Profile from '../pages/profile';
 import Conversation from '../pages/conversation';
+import Features from '../pages/features'
 import Post from "../pages/post";
 
 const logout: ReactDOM.Root = ReactDOM.createRoot(document.getElementById("logout") as HTMLElement)
@@ -30,6 +31,7 @@ root.render(
       <Route element={<Profile />} path="/profile/:id" />
       <Route element={<Conversation />} path='/conversation/:id' />
       <Route element={<Post />} path='/post/:id'></Route>
+      <Route element={<Features />} path='/features'></Route>
     </Routes>
   </BrowserRouter>
 );

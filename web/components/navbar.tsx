@@ -173,9 +173,9 @@ const Navbar: React.FC<NavbarComponentProps> = ({ Animated }) => {
                          }}>Nastachat</a></h1>
                          {
                               !isLoggedIn ? <ul className="flex ml-6 relative top-[2px] gap-4 nav1:hidden text-[17px] [&>*]:transition duration-[500ms] [&>*]:delay-[20ms] [&>*]:select-none [&>*]:cursor-pointer">
-                                   <li className="hover:opacity-80">Home</li>
-                                   <li className="hover:opacity-80">Our Company</li>
-                                   <li className="hover:opacity-80">Features</li>
+                                   <li className="hover:opacity-80"><a href='/'>Home</a></li>
+                                   <li className="hover:opacity-80"><a href="/our-company">Our Company</a></li>
+                                   <li className="hover:opacity-80"><a href="/features">Features</a></li>
                               </ul> : <AuthNavItems notifications={notifications} setNotifications={setNotifications} user={user} />
                          }
 

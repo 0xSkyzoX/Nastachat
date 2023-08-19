@@ -67,7 +67,7 @@ app.post("/login", async (req, res) => {
           if (passwordMatch !== user?.password) {
                return res.status(403).json({ error: 'The username or password is incorrect' });
           }
-          const token = jwt.sign({ email }, secretKey, { expiresIn: '24h' });
+          const token = jwt.sign({ email }, secretKey);
           return res.status(200).json({ token });
      } catch (error) {
           console.error(error);

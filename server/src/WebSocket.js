@@ -1,5 +1,5 @@
 const WebSocket = require("ws");
-const wss = new WebSocket.Server({ port: 4004 });
+const wss = new WebSocket.Server({ port: 4005 });
 const authenticatedClients = new Map();
 const jwt = require("jsonwebtoken")
 const secretKey = 'yournightmarecode';
