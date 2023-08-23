@@ -32,30 +32,6 @@ Before you begin, ensure you have the following installed:
 
    This command will launch your server application and make it accessible at the specified port.
 
-## Starting the Web Application with Vite
-
-1. Open a new terminal window.
-
-2. Navigate to the directory where your web application is located using the `cd` command:
-
-   ```bash
-   cd web
-   ```
-
-3. Install the required dependencies for the web application by running:
-
-   ```bash
-   npm install
-   ```
-
-4. After the dependencies are installed, you can start the web application using the following command:
-
-   ```bash
-   npm start
-   ```
-
-   This command will launch your web application using Vite's development server. You can access the application in your browser at the specified URL.
-
 ## Building the Web Application
 
 Before deploying your web application to production, it's a good practice to build it for optimized performance.
